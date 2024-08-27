@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e6eafa;
+}
+
+#circle-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}

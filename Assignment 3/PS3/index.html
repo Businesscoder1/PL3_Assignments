@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Trishul's Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Trishul's Bookstore</h1>
+            <nav>
+                
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="homy">Home</a></li>
+                    <li><a href="books.html" class="homy">Books</a></li>
+                    <li><a href="contact.html" class="homy">Contact</a></li>
+                </ul>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <span id="cart-count">0</span>
+                    <img src="shopping-cart.png" alt="Cart">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="featured">
+            <div class="container-featured">
+                <h2>Featured Books</h2>
+                <div class="book-carousel">
+                    <div class="book-card">
+                        <img src="../PS3/images/wingOfFire.webp" alt="Wings of Fire">
+                        <h3>Wings of Fire</h3>
+                        <p>APJ Abdul Kalam</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/richdad.jpg" alt="Rich Dad Poor Dad">
+                        <h3>Rich Dad Poor Dad</h3>
+                        <p>Robert Kiyosaki</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/theAlchemist.jpg" alt="The Alchemist">
+                        <h3>The Alchemist</h3>
+                        <p>Paulo Coelho</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/theGreat.jpg" alt="The Great Gatsby">
+                        <h3>The Great Gatsby</h3>
+                        <p>F. Scott Fitzgerald</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/1984.jpeg" alt="1984">
+                        <h3>1984</h3>
+                        <p>George Orwell</p>
+                    </div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="book-card">
+                        <img src="../PS3/images/daVinci.jpg" alt="Da Vinci Code">
+                        <h3>The Da Vinci Code</h3>
+                        <p>Dan Brown</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/pride.webp" alt="Pride Prejudice">
+                        <h3>Pride Prejudice</h3>
+                        <p>Jane Austen</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/hobbit.jpg" alt="The Hobbit">
+                        <h3>The Hobbit</h3>
+                        <p>J.R.R. Tolkien</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/AlltheLight.jpeg" alt="All The Light We Cannot See">
+                        <h3>All The Light We Cannot See</h3>
+                        <p>Anthony Doerr</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="../PS3/images/1984.jpeg" alt="1984">
+                        <h3>1984</h3>
+                        <p>George Orwell</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside id="cart" class="cart-panel">
+        <div class="cart-header">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Cart</h2>
+        </div>
+        <ul id="cart-items"></ul>
+        <div class="cart-footer">
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </aside>
+    <div id="popup" class="popup"></div>
+    
+
+    <div id="popup" class="popup"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

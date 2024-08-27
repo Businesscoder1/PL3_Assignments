@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Trishul's Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Trishul's Bookstore</h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="homy">Home</a></li>
+                    <li><a href="books.html" class="homy">Books</a></li>
+                    <li><a href="contact.html" class="homy">Contact</a></li>
+                </ul>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <span id="cart-count">0</span>
+                    <img src="shopping-cart.png" alt="Cart">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="books">
+            <div class="container-main">
+                <h2>Available Books</h2>
+                <div class="book-grid">
+                    <div class="section1">
+                        <div class="book-card">
+                            <img src="/PS3/images/hobbit.jpg" alt="The Hobbit">
+                            <h3>The Hobbit</h3>
+                            <p>J.R.R. Tolkien</p>
+                            <button onclick="addToCart('The Hobbit','/PS3/images/hobbit.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('The Hobbit')">Description</button>
+                        </div>
+                        <div class="book-card">
+                            <img src="/PS3/images/tokill.jpeg" alt="To Kill A MockingBird ">
+                            <h3>To Kill A MockingBird </h3>
+                            <p>Harper Lee</p>
+                            <button onclick="addToCart('To Kill A MockingBird ','/PS3/images/tokill.jpeg')">Add to Cart</button>
+                            <button onclick="showDescription('To Kill A MockingBird ')">Description</button>
+                        </div>
+                        <div class="book-card">
+                            <img src="/PS3/images/thinkandgrow.jpeg" alt="Think And Grow Rich">
+                            <h3>Think And Grow Rich</h3>
+                            <p>Napoleon Hill</p>
+                            <button onclick="addToCart('Think And Grow Rich','/PS3/images/thinkandgrow.jpeg')">Add to Cart</button>
+                            <button onclick="showDescription('Think And Grow Rich')">Description</button>
+                        </div>
+                        <div class="book-card">
+                            <img src="/PS3/images/theGreat.jpg" alt="The Great Gatsby">
+                            <h3>The Great Gatsby</h3>
+                            <p> F. Scott Fitzgerald</p>
+                            <button onclick="addToCart('The Great Gatsby','/PS3/images/theGreat.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('The Great Gatsby')">Description</button>
+                        </div>
+                    </div>
+
+                    <div class="section2">
+                        <div class="book-card">
+                            <img src="/PS3/images/HarryPotter2.jpg" alt="Harry Potter And Deathly Hallows">
+                            <h3>Harry Potter And Deathly Hallows</h3>
+                            <p>J.K. Rowling</p>
+                            <button onclick="addToCart('Harry Potter And Deathly Hallows','/PS3/images/HarryPotter2.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('Harry Potter And Deathly Hallows')">Description</button>
+                        </div>
+                        <div class="book-card">
+                            <img src="/PS3/images/homecomming1.jpg" alt="HomeComming">
+                            <h3>HomeComming</h3>
+                            <p>Kate Morton</p>
+                            <button onclick="addToCart('HomeComming','/PS3/images/homecomming1.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('HomeComming')">Description</button>
+                        </div>
+    
+                        <div class="book-card">
+                            <img src="/PS3/images/orphanWar.jpg" alt="An Orphan's War">
+                            <h3>An Orphan's War</h3>
+                            <p>Molly Green</p>
+                            <button onclick="addToCart('An Orphans War','/PS3/images/orphanWar.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('An Orphans War')">Description</button>
+                        </div>
+                        <div class="book-card">
+                            <img src="/PS3/images/icaniwill.jpg" alt="I Can And I Will">
+                            <h3>I Can And I Will</h3>
+                            <p>Author Name</p>
+                            <button onclick="addToCart('I Can And I Will','/PS3/images/icaniwill.jpg')">Add to Cart</button>
+                            <button onclick="showDescription('I Can And I Will')">Description</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside id="cart" class="cart-panel">
+        <div class="cart-header">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Cart</h2>
+        </div>
+        <ul id="cart-items"></ul>
+        <div class="cart-footer">
+            <button onclick="clearCart()" >Clear Cart</button>
+        </div>
+    </aside>
+    <div id="popup" class="popup"></div>
+    
+
+    <div id="popup" class="popup"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

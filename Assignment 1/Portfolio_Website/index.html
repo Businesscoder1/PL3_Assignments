@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="left">
+                    <div class="tp">
+                        <button id="tp"><span class="bolded">T.P</span></button>
+                        <h2 id="name">Trishul's Portfolio</h2>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#brief">Brief</a>
+                    <a href="#achieve">Achievements</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="Fst" class="Fst">
+                <div class="leftSec">Hi, I am Trishul
+                    <div>and I am a Web Developer</div>
+                </div>
+                <div class="rightSec">
+                    <img src="trishul.jpeg" alt="Trishul" id="trishul">
+                </div>
+            </section>
+
+            <section id="brief" class="brief">
+                <div>
+                    <p>A passionate and dedicated software developer with a keen interest in Java programming and web development. Currently pursuing my studies in computer science, I have developed a strong foundation in various programming languages and technologies.</p>
+                    <p>I have hands-on experience working with Java, developing projects that involve complex functionalities such as inheritance, polymorphism, and data manipulation. My academic projects include a bank management system using Java Swing, AWT, and DBMS, which has honed my skills in creating user-friendly interfaces and efficient backend systems.</p>
+                    <p>In addition to my Java expertise, I am also exploring web development with a focus on modern frameworks like React. Recently, I have been working on a React application using Vite, where I have gained valuable experience in building dynamic and responsive web applications.</p>
+                    <p>I am always eager to learn new technologies and take on challenging projects. My goal is to continuously improve my skills and contribute to innovative software solutions that make a positive impact.</p>
+                </div>
+            </section>
+
+            <section id="achieve" class="achieve">
+                <h1>Achievements In Life</h1>
+                <ol>
+                    <li>Eloquence Business Presentation Winner 2023-24</li>
+                    <li>Cleared NDA Written in first attempt and conference out from 5AFSB Guwahati</li>
+                    <li>Selected for Navy BTech and TES- Army Entry</li>
+                    <li>Cleared NTSE Stage 1 in 2019</li>
+                </ol>
+            </section>
+
+            <section id="projects" class="projects">
+                <div class="project">
+                    <h2>Bank Management System</h2>
+                    <h3>Technologies:</h3>
+                    <ul>
+                        <li>AWT</li>
+                        <li>Swing</li>
+                        <li>JDBC</li>
+                        <li>MYSQL Database</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h2>Shoes Shopping Website</h2>
+                    <h3>Technologies:</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>HTML, CSS</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h2>Hyacinth Plant Removal Automatic Machine</h2>
+                    <h3>Technologies:</h3>
+                    <ul>
+                        <li>Image Processing</li>
+                        <li>Sensors</li>
+                        <li>Arduino</li>
+                        <li>3D Modeling</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="hobbies" class="hobbies">
+                <div>
+                    <h2>Hobbies/Interests</h2>
+                    <ul>
+                        <li>Reading Books</li>
+                        <li>Listening to Music</li>
+                        <li>Playing Volleyball</li>
+                        <li>Exercise and Running</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div>
+                    <h3>Email: <a href="mailto:trishul.patil@walchandsangli.ac.in">trishul.patil@walchandsangli.ac.in</a></h3>
+                    <h3>LinkedIn: <a href="https://linkedin.com/in/trishul47" target="_blank">Trishul Patil</a></h3>
+                    <h3>Leetcode: <a href="https://leetcode.com/u/trishul47/" target="_blank">trishul47</a></h3>
+                    <h3>Phone No: <a href="tel:9370204547">9370204547</a></h3>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>End of Website</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const headline = document.querySelector(".leftSec");
+
+            const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+            tl.to(headline, { duration: 1, opacity: 1, scale: 1.2, ease: "power1.inOut" })
+              .to(headline, { duration: 1, x: 100, ease: "power1.inOut" })
+              .to(headline, { duration: 1, rotation: 0, ease: "power1.inOut" })
+              .to(headline, { duration: 1, x: 0, ease: "power1.inOut" })
+              .to(headline, { duration: 1, color: "#ff6347", ease: "power1.inOut" })
+              .to(headline, { duration: 1, scale: 1, color: "black", ease: "power1.inOut" });
+
+            gsap.set(headline, { opacity: 0 });
+        });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

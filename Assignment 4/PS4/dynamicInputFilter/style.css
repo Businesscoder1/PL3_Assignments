@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    background-color: rgb(223, 224, 225);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    
+}
+.itemList{
+    width: 400px;
+    
+    border: 2px solid black;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(197, 193, 193);
+}
