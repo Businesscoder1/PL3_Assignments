@@ -5,28 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Input Filter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <input type="text"   id="searchBox" placeholder="Search...">
+    <input type="text" id="searchBox" placeholder="Search...">
     <div class="itemList">
         <ul id="itemList">
-            <li>Apple</li>
-            <li>Angir</li>
-            <li>Cherry</li>
-            <li>Date</li>
-            <li>Grape</li>
-            <li>Orange</li>
-            <li>Pear</li>
-            <li>Kiwi</li>
-            <li>SitaFhal</li>
-            <li>Strawberry</li>
-            <li>Watermelon</li>
-            <li>DragonFruit</li>
+            <li>apple</li>
+            <li>banana</li>
+            <li>cat</li>
+            <li>dog</li>
+            <li>elephant</li>
+            <li>frog</li>
+            <li>grape</li>
+            <li>hat</li>
+            <li>igloo</li>
+            <li>jacket</li>
+            <li>kite</li>
+            <li>lemon</li>
+            <li>monkey</li>
+            <li>notebook</li>
+            <li>orange</li>
+            <li>pencil</li>
+            <li>quilt</li>
+            <li>rabbit</li>
+            <li>sunflower</li>
+            <li>table</li>
+            <li>umbrella</li>
+            <li>violin</li>
+            <li>whale</li>
+            <li>xylophone</li>
+            <li>yarn</li>
+            <li>zebra</li>
+            <li>anchor</li>
+            <li>beach</li>
+            <li>candy</li>
+            <li>desk</li>
+            <li>envelope</li>
+            <li>feather</li>
+            <li>giraffe</li>
+            <li>hamburger</li>
+            <li>island</li>
+            <li>jungle</li>
+            <li>kangaroo</li>
+            <li>lamp</li>
+            <li>mountain</li>
+            <li>newspaper</li>
+            <li>octopus</li>
+            <li>pizza</li>
+            <li>quill</li>
+            <li>rainbow</li>
+            <li>sandwich</li>
+            <li>train</li>
+            <li>unicorn</li>
+            <li>vase</li>
+            <li>window</li>
+            <li>x-ray</li>
+            <li>yacht</li>
+            <li>zipper</li>
+            <li>arrow</li>
+            <li>balloon</li>
+            <li>cactus</li>
+            <li>drum</li>
+            <li>engine</li>
+            <li>forest</li>
+            <li>garden</li>
+            <li>helmet</li>
+            <li>iceberg</li>
+            <li>jewel</li>
+            <li>kettle</li>
+            <li>ladder</li>
+            <li>moon</li>
+            <li>nest</li>
+            <li>owl</li>
+            <li>penguin</li>
+            <li>queen</li>
+            <li>river</li>
+            <li>ship</li>
+            <li>tiger</li>
+            <li>urchin</li>
+            <li>vulture</li>
+            <li>wolf</li>
+            <li>xenon</li>
+            <li>yogurt</li>
+            <li>zeppelin</li>
+            <li>ant</li>
+            <li>boat</li>
+            <li>cloud</li>
+            <li>diamond</li>
+            <li>eagle</li>
+            <li>flamingo</li>
+            <li>guitar</li>
+            <li>house</li>
+            <li>igloo</li>
+            <li>jellyfish</li>
+            <li>koala</li>
+            <li>lion</li>
+            <li>mouse</li>
+            <li>necklace</li>
+            <li>ostrich</li>
+            <li>piano</li>
+            <li>quasar</li>
+            <li>rose</li>
+            <li>star</li>
+            <li>telescope</li>
+            <li>umbrella</li>
+            <li>vulture</li>
+            <li>whistle</li>
+            <li>xylophone</li>
+            <li>yak</li>
+            <li>zebra</li>
+            <li>alphabet</li>
+            <li>brush</li>
+            <li>cushion</li>
+            <li>drum</li>
+            <li>elephant</li>
+            <li>fan</li>
+            <li>giraffe</li>
+            <li>hat</li>
+            <li>ink</li>
+            <li>jacket</li>
+            <li>kitchen</li>
+            <li>lemon</li>
+            <li>mirror</li>
+            <li>napkin</li>
+            <li>orchid</li>
+            <li>pencil</li>
+            <li>quilt</li>
+            <li>rock</li>
+            <li>soap</li>
+            <li>towel</li>
+            <li>umbrella</li>
+            <li>vase</li>
+            <li>window</li>
+            <li>xylophone</li>
+            <li>yarn</li>
+            <li>zebra</li>
+            <li>candle</li>
+<li>drill</li>
+<li>elevator</li>
+<li>feather</li>
+<li>globe</li>
+<li>hammer</li>
+<li>iron</li>
+<li>jigsaw</li>
+<li>knot</li>
+<li>ladder</li>
+<li>magnet</li>
+<li>needle</li>
+<li>octopus</li>
+<li>paintbrush</li>
+<li>quiver</li>
+<li>ribbon</li>
+<li>scissors</li>
+<li>tornado</li>
+<li>umbrella</li>
+<li>vessel</li>
+<li>whistle</li>
+<li>xenon</li>
+<li>yogurt</li>
+<li>zeppelin</li>
+<li>arrow</li>
+<li>bucket</li>
+<li>canoe</li>
+<li>drum</li>
+<li>eagle</li>
+<li>fork</li>
+<li>glove</li>
+<li>honey</li>
+<li>island</li>
+<li>jeep</li>
+<li>kettle</li>
+<li>lamp</li>
+<li>melon</li>
+<li>nest</li>
+<li>ostrich</li>
+<li>pencil</li>
+<li>quilt</li>
+<li>rope</li>
+<li>spoon</li>
+<li>tiger</li>
+<li>umbrella</li>
+<li>volcano</li>
+<li>wrench</li>
+<li>x-ray</li>
+<li>yacht</li>
+<li>zebra</li>
+
+            <!-- Continue adding words here to reach 1000 -->
         </ul>
     </div>
-    
-
-
 
     <script src="script.js"></script>
 </body>

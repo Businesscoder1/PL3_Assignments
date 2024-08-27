@@ -1,18 +1,40 @@
-// Make balloons disappear on mouseover
 document.querySelectorAll('.balloon').forEach(function(b) {
+    let state = 0; 
+
     b.addEventListener('mouseover', function() {
-        this.style.opacity = 0;
+        if (state === 0) {
+            this.style.backgroundColor = 'blue'; 
+            state = 1;
+        } else if (state === 1) {
+            this.style.opacity = 0;
+            state = 2;
+        } else {
+            this.style.opacity = 1; 
+            this.style.backgroundColor = 'red'; 
+            state = 0;
+        }
     });
 });
 
-// Restore balloons' opacity on refresh button click
 document.getElementById('refresh').addEventListener('click', function() {
     document.querySelectorAll('.balloon').forEach(function(b) {
-        b.style.opacity = 1; // Reset the opacity to 1
+        b.style.opacity = 1; 
+        b.style.backgroundColor = 'red';
+        
+        let state = 0;
 
-        // Re-enable the mouseover event to allow balloons to disappear again
         b.addEventListener('mouseover', function() {
-            this.style.opacity = 0;
+            if (state === 0) {
+                this.style.backgroundColor = 'blue';
+                state = 1;
+            } else if (state === 1) {
+                this.style.opacity = 0;
+                state = 2;
+            } else {
+                this.style.opacity = 1;
+                this.style.backgroundColor = 'red';
+                state = 0;
+            }
         });
     });
 });

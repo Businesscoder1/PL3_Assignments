@@ -10,3 +10,4 @@ document.getElementById('click').addEventListener('click',function(){
     cnt++;
     
 })
+

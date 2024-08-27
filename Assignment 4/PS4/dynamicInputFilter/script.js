@@ -1,48 +1,27 @@
+$(document).ready(function() {
+    $('#searchBox').on('keyup', function() {
+        const searchTerm = $(this).val().toLowerCase();
+        const $items = $('#itemList li');
 
-// Normal code for searching
+        $items.each(function() {
+            const $item = $(this);
+            const text = $item.text().toLowerCase();
 
+            if (searchTerm && text.includes(searchTerm)) {
+                const startIndex = text.indexOf(searchTerm);
+                const endIndex = startIndex + searchTerm.length;
+                const originalText = $item.text();
 
-// document.getElementById('searchBox').addEventListener('keyup', function() {
-//     const searchTerm = this.value.toLowerCase();
-//     const items = document.querySelectorAll('#itemList li'); // Use querySelectorAll to get all list items
+                const highlightedText = originalText.substring(0, startIndex) +
+                    '<strong>' + originalText.substring(startIndex, endIndex) + '</strong>' +
+                    originalText.substring(endIndex);
 
-//     items.forEach(function(item) {
-//         const text = item.textContent.toLowerCase();
-//         if (text.includes(searchTerm)) {
-//             item.style.display = ''; // Show item if it matches the search term
-            
-//         } else {
-//             item.style.display = 'none'; // Hide item if it doesn't match
-//         }
-//     });
-// });
-
-
-
-
-// I want the searched text of letter should be bolded like in google search
-
-document.getElementById('searchBox').addEventListener('keyup', function() {
-    const searchTerm = this.value.toLowerCase();
-    const items = document.querySelectorAll('#itemList li');
-
-    items.forEach(function(item) {
-        const text = item.textContent.toLowerCase();
-        const originalText = item.textContent;
-
-        if (searchTerm && text.includes(searchTerm)) {
-            const startIndex = text.indexOf(searchTerm);
-            const endIndex = startIndex + searchTerm.length;
-            
-            const highlightedText = originalText.substring(0, startIndex) +
-                                    '<strong>' + originalText.substring(startIndex, endIndex) + '</strong>' +
-                                    originalText.substring(endIndex);
-
-            item.innerHTML = highlightedText;
-            item.style.display = ''; 
-        } else {
-            item.innerHTML = originalText; 
-            item.style.display = searchTerm ? 'none' : ''; 
-        }
+                $item.html(highlightedText);
+                $item.show(); // Show matching item
+            } else {
+                $item.html($item.text()); // Reset the item content
+                $item.toggle(searchTerm === ''); // Hide non-matching items
+            }
+        });
     });
 });

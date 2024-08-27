@@ -22,8 +22,9 @@ ul {
 }
 .itemList{
     width: 400px;
-    
     border: 2px solid black;
+    max-height: 400px; 
+    overflow-y: auto; 
 }
 
 li {
@@ -31,3 +32,11 @@ li {
     font-size: 18px;
     border-bottom: 1px solid rgb(197, 193, 193);
 }
+
+
+
+
+
+
+
+
