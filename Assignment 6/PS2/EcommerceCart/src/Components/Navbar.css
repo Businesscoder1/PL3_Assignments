@@ -1,0 +1,24 @@
+/* Navbar specific styling */
+nav {
+    background-color: #2d3748; /* Dark gray (same as bg-gray-800 in Tailwind) */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  nav h1 {
+    font-size: 1.75rem; /* Matches Tailwind text-2xl */
+    color: #f6e05e; /* Yellow-300 in Tailwind */
+  }
+  
+  nav a {
+    margin-left: 1.5rem; /* Space between links */
+    font-size: 1.125rem; /* Matches Tailwind text-lg */
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #f6e05e; /* Yellow-300 */
+    transition: color 0.3s ease;
+  }
+  
